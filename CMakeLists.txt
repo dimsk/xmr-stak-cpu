@@ -85,8 +85,8 @@ endif()
 ################################################################################
 
 # activate sse2 and aes-ni
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -msse2 -maes")
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -msse2 -maes")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=bdver1 -msse2 -maes -msse3")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -march=bdver1 -msse2 -maes -msse3")
 
 # activate static libgcc and libstdc++ linking
 if(CMAKE_LINK_STATIC)
