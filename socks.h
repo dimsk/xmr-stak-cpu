@@ -80,7 +80,8 @@ inline const char* sock_strerror(char* buf, size_t len)
 	strerror_r(errno, buf, len);
 	return buf;
 #else
-	return strerror_r(errno, buf, len);
+	strerror_r(errno, buf, len);
+	return buf;
 #endif
 }
 
